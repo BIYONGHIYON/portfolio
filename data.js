@@ -82,6 +82,24 @@ window.PORTFOLIO = {
       ]
     },
     {
+      title: "Linkcast",
+      kind: "웹 서비스 · 실시간 P2P 화면 공유",
+      period: "2026.09 — 2026.10",
+      role: "개인 프로젝트",
+      summary: "USB 캡처보드나 화면 공유로 입력한 콘솔·PC 화면을 링크 하나로 공유하는 소규모 실시간 방송 서비스입니다. 송출자가 최대 5명에게 영상을 보내고, 모두가 브라우저에서 음성으로 대화할 수 있습니다.",
+      highlights: [
+        "WebRTC P2P로 최대 1080p 60fps 초저지연 송출",
+        "송출자·참가자 전원이 참여하는 음성 통화",
+        "클릭·터치 드래그로 포인터를 공유하는 레이저 모드",
+        "Cloudflare Durable Object 시그널링 · 영상은 서버에 저장하지 않음"
+      ],
+      tags: ["TypeScript", "React", "WebRTC", "Cloudflare Workers", "Durable Objects"],
+      links: [
+        { label: "서비스 열기", url: "https://linkcast.byeonghyeon383.workers.dev/" },
+        { label: "GitHub", url: "https://github.com/BIYONGHIYON/linkcast" }
+      ]
+    },
+    {
       title: "NODE",
       kind: "게임 · 2.5D 로컬 협동 플랫포머",
       period: "2026.04 — 2026.06",
