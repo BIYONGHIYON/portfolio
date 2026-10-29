@@ -37,7 +37,7 @@ window.PORTFOLIO = {
         { date: "2015.10", type: "award", title: "2015 강원도 청소년창의력경진대회 기술분과 금상", org: "강원도 교육감상" },
         { date: "2015.07", type: "award", title: "2015 대한민국 학생창의력 챔피언 강원도 금상", org: "강원도 교육감상" },
         { date: "2015.06", type: "award", title: "제61회 강원도과학전람회 물리부문 장려상", org: "강원도 교육감상" },
-        { date: "2015.04", type: "award", title: "제48회 과학의 날 미래창조과학부장관상", org: "장관상" },
+        { date: "2015.04", type: "award", title: "제48회 과학의 날 미래창조과학부장관상", org: "미래창조과학부 장관상" },
         { date: "2003.08", type: "life", title: "강원도 원주시 출생" }
       ]
     }
