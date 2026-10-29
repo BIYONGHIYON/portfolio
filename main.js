@@ -50,17 +50,18 @@
   // 프로젝트
   const projectsEl = document.querySelector("[data-projects]");
   projectsEl.innerHTML = data.projects.length
-    ? data.projects.map((p) => {
-        const tag = p.link ? "a" : "article";
-        const href = p.link ? ` href="${esc(p.link)}" target="_blank" rel="noopener"` : "";
-        return `
-          <${tag} class="project reveal"${href}>
-            <span class="meta mono">${esc(p.period)}${p.role ? " · " + esc(p.role) : ""}</span>
+    ? data.projects.map((p) => `
+        <article class="project reveal">
+          <span class="meta mono">${esc(p.period)}${p.role ? " · " + esc(p.role) : ""}</span>
+          <div>
             <h3>${esc(p.title)}</h3>
-            <p>${esc(p.summary)}</p>
-            <div class="tags">${(p.tags || []).map((t) => `<span>${esc(t)}</span>`).join("")}</div>
-          </${tag}>`;
-      }).join("")
+            ${p.kind ? `<span class="kind">${esc(p.kind)}</span>` : ""}
+          </div>
+          <p>${esc(p.summary)}</p>
+          ${(p.highlights || []).length ? `<ul class="highlights">${p.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>` : ""}
+          <div class="tags">${(p.tags || []).map((t) => `<span>${esc(t)}</span>`).join("")}</div>
+          ${(p.links || []).length ? `<div class="links">${p.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>` : ""}
+        </article>`).join("")
     : `<div class="project empty reveal"><span class="meta mono">coming soon</span><h3>프로젝트를 정리하고 있습니다</h3><p>앱 · 웹 · 컴퓨터비전 프로젝트가 곧 추가됩니다.</p></div>`;
 
   // 스크롤 등장

@@ -43,7 +43,61 @@ window.PORTFOLIO = {
     }
   ],
 
-  // 프로젝트는 아직 비어 있습니다. 아래 형식으로 추가하면 카드가 생깁니다.
-  // { title: "", period: "", role: "", summary: "", tags: [""], link: "" }
-  projects: []
+  // 형식: { title, kind, period, role, summary, highlights: [], tags: [], links: [{ label, url }] }
+  projects: [
+    {
+      title: "TopOut",
+      kind: "모바일 앱 · iOS / Android 출시",
+      period: "2026.06 — 현재",
+      role: "개인 프로젝트",
+      summary: "등반 시작부터 완등 순간까지 자동으로 찾아주는 실내 클라이밍 촬영 앱입니다. 긴 영상을 다시 돌려보며 장면을 찾는 대신, 기기 안에서 움직임과 자세를 분석해 필요한 구간만 골라 줍니다.",
+      highlights: [
+        "App Store · Google Play 출시 (v2.3)",
+        "기기 내 자세 추정과 MobileSAM으로 매트 경계 자동 탐지",
+        "한 번의 촬영에서 여러 등반 시도를 자동으로 구분",
+        "영상을 서버로 보내지 않는 온디바이스 분석 · 9개 언어 지원"
+      ],
+      tags: ["Swift", "Kotlin", "Jetpack Compose", "Apple Vision", "MoveNet", "MobileSAM"],
+      links: [
+        { label: "App Store", url: "https://apps.apple.com/app/id6790163178" },
+        { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.topout.cam" },
+        { label: "소개 페이지", url: "https://biyonghiyon.github.io/TopOut-app/" }
+      ]
+    },
+    {
+      title: "CtrS",
+      kind: "딥러닝 연구 · 위성영상 팬샤프닝",
+      period: "2026.09 — 현재",
+      role: "팀장 · 4인",
+      summary: "고해상도 흑백 위성영상(PAN)과 저해상도 다중분광영상(MS)을 합쳐 고해상도 컬러 영상을 복원하는 팬샤프닝 연구입니다. 동국대 종합설계1 프로젝트로 SSA-MRN의 성능을 개선하고 있습니다.",
+      highlights: [
+        "병렬 가지 + 축척 혼합 학습으로 새 기준 모델 C2MS 채택",
+        "원본 SSA-MRN 대비 QB RR PSNR +0.87 dB (3시드 평균)",
+        "학습하지 않은 센서(WV2)에서 색 치우침 7.2% → 1.0%",
+        "validation으로 고르고 test로 판정하는 실험 기준 운영"
+      ],
+      tags: ["PyTorch", "Computer Vision", "Pansharpening", "Remote Sensing"],
+      links: [
+        { label: "GitHub", url: "https://github.com/BIYONGHIYON/CtrS" }
+      ]
+    },
+    {
+      title: "NODE",
+      kind: "게임 · 2.5D 로컬 협동 플랫포머",
+      period: "2026.04 — 2026.06",
+      role: "개인 프로젝트",
+      summary: "두 우주비행사가 로프로 서로를 이어 우주를 탐험하는 2인 로컬 협동 게임입니다. 파트너나 지형에 로프를 걸고 스윙하며 퍼즐을 풀고, 흩어진 연료통을 모아 다음 행성으로 넘어갑니다.",
+      highlights: [
+        "파트너·지형에 거는 로프 스윙 액션",
+        "고중력 목성, 무중력 토성 등 행성마다 다른 중력",
+        "밀고 당기는 운석과 지형을 활용한 협동 퍼즐",
+        "Windows · macOS 설치 파일 배포"
+      ],
+      tags: ["Unity", "C#", "Local Co-op"],
+      links: [
+        { label: "GitHub", url: "https://github.com/BIYONGHIYON/NODE" },
+        { label: "다운로드", url: "https://github.com/BIYONGHIYON/NODE/releases/latest" }
+      ]
+    }
+  ]
 };
