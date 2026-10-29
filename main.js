@@ -77,24 +77,6 @@
     reveals.forEach((el) => io.observe(el));
   }
 
-  // 숫자 카운트업
-  document.querySelectorAll("[data-count]").forEach((el) => {
-    if (reduceMotion) return;
-    const target = +el.dataset.count;
-    const io = new IntersectionObserver(([e]) => {
-      if (!e.isIntersecting) return;
-      io.disconnect();
-      const start = performance.now();
-      const tick = (now) => {
-        const k = Math.min(1, (now - start) / 900);
-        el.textContent = Math.round(target * (1 - Math.pow(1 - k, 3)));
-        if (k < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    });
-    io.observe(el);
-  });
-
   // 히어로 배경: 마우스를 따라 퍼지는 점 격자 (영상의 픽셀 격자를 모티프로)
   const canvas = document.querySelector(".hero-canvas");
   const ctx = canvas.getContext("2d");
