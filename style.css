@@ -151,12 +151,6 @@ a { color: inherit; }
 .profile-card small { color: var(--fg-2); font-weight: 400; }
 
 /* Skills */
-.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
-.chips span {
-  padding: 8px 16px; border-radius: 999px; font-weight: 600; font-size: 15px;
-  background: color-mix(in srgb, var(--accent) 10%, var(--bg-2));
-  color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
-}
 .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .card {
   background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius);
@@ -174,7 +168,7 @@ a { color: inherit; }
 /* Projects */
 .projects { display: grid; gap: 16px; }
 .project {
-  display: grid; grid-template-columns: 1.1fr 1fr; column-gap: 40px; row-gap: 12px;
+  display: grid; grid-template-columns: 1.25fr 1fr; column-gap: 40px; row-gap: 12px;
   grid-template-areas: "meta hl" "head hl" "sum hl" "links tags";
   background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 32px; transition: transform .25s, box-shadow .25s, border-color .25s;
@@ -196,9 +190,9 @@ a { color: inherit; }
 }
 .project .tags { grid-area: tags; display: flex; flex-wrap: wrap; gap: 6px; align-self: end; }
 .project .tags span { font-size: 12px; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--fg-2); }
-.project .links { grid-area: links; display: flex; flex-wrap: wrap; gap: 8px; align-self: end; padding-top: 8px; }
+.project .links { grid-area: links; display: flex; flex-wrap: wrap; gap: 6px; align-self: end; padding-top: 8px; }
 .project .links a {
-  font-size: 14px; font-weight: 600; text-decoration: none; padding: 7px 14px; border-radius: 999px;
+  font-size: 13px; font-weight: 600; text-decoration: none; padding: 6px 12px; border-radius: 999px; white-space: nowrap;
   background: var(--fg); color: var(--bg); transition: opacity .2s;
 }
 .project .links a:hover { opacity: .8; }

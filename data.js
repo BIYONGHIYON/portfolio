@@ -5,7 +5,7 @@ window.PORTFOLIO = {
   timeline: [
     {
       period: "2022 — 2026",
-      label: "대학 · 병역",
+      label: "대학",
       items: [
         { date: "2026.07", type: "study", title: "2026-1학기 학기우등생" },
         { date: "2026.02", type: "study", title: "2025-2학기 학기우등생" },
@@ -32,7 +32,7 @@ window.PORTFOLIO = {
     },
     {
       period: "2003 — 2015",
-      label: "어린 시절",
+      label: "초등학교",
       items: [
         { date: "2015.10", type: "award", title: "2015 강원도 청소년창의력경진대회 기술분과 금상", org: "강원도 교육감상" },
         { date: "2015.07", type: "award", title: "2015 대한민국 학생창의력 챔피언 강원도 금상", org: "강원도 교육감상" },
@@ -61,7 +61,8 @@ window.PORTFOLIO = {
       links: [
         { label: "App Store", url: "https://apps.apple.com/app/id6790163178" },
         { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.topout.cam" },
-        { label: "소개 페이지", url: "https://biyonghiyon.github.io/TopOut-app/" }
+        { label: "소개 페이지", url: "https://topout-portfolio.vercel.app/" },
+        { label: "GitHub", url: "https://github.com/BIYONGHIYON/TopOut-app" }
       ]
     },
     {
@@ -74,7 +75,7 @@ window.PORTFOLIO = {
         "병렬 가지 + 축척 혼합 학습으로 새 기준 모델 C2MS 채택",
         "원본 SSA-MRN 대비 QB RR PSNR +0.87 dB (3시드 평균)",
         "학습하지 않은 센서(WV2)에서 색 치우침 7.2% → 1.0%",
-        "validation으로 고르고 test로 판정하는 실험 기준 운영"
+        "GF2·WV3·학습하지 않은 WV2 센서에서도 원본 대비 개선 (3시드)"
       ],
       tags: ["PyTorch", "Computer Vision", "Pansharpening", "Remote Sensing"],
       links: [
@@ -91,7 +92,7 @@ window.PORTFOLIO = {
         "WebRTC P2P로 최대 1080p 60fps 초저지연 송출",
         "송출자·참가자 전원이 참여하는 음성 통화",
         "클릭·터치 드래그로 포인터를 공유하는 레이저 모드",
-        "Cloudflare Durable Object 시그널링 · 영상은 서버에 저장하지 않음"
+        "Cloudflare Workers · Durable Objects 기반 시그널링"
       ],
       tags: ["TypeScript", "React", "WebRTC", "Cloudflare Workers", "Durable Objects"],
       links: [
@@ -113,8 +114,8 @@ window.PORTFOLIO = {
       ],
       tags: ["Unity", "C#", "Local Co-op"],
       links: [
-        { label: "GitHub", url: "https://github.com/BIYONGHIYON/NODE" },
-        { label: "다운로드", url: "https://github.com/BIYONGHIYON/NODE/releases/latest" }
+        { label: "다운로드", url: "https://github.com/BIYONGHIYON/NODE/releases/latest" },
+        { label: "GitHub", url: "https://github.com/BIYONGHIYON/NODE" }
       ]
     }
   ]
