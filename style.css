@@ -93,6 +93,8 @@ a { color: inherit; }
 .hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-inner { position: relative; max-width: var(--max); width: 100%; }
 .eyebrow { color: var(--fg-2); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 18px; }
+.hero-name { font-size: clamp(18px, 2.3vw, 25px); font-weight: 700; margin: 0 0 16px; }
+.hero-name span { color: var(--fg-2); font-size: .8em; font-weight: 500; }
 .hero h1 {
   font-size: clamp(44px, 8vw, 96px); line-height: 1.12; letter-spacing: -.035em;
   font-weight: 800; margin: 0 0 28px;
@@ -169,7 +171,7 @@ a { color: inherit; }
 .projects { display: grid; gap: 16px; }
 .project {
   display: grid; grid-template-columns: 1.25fr 1fr; column-gap: 40px; row-gap: 12px;
-  grid-template-areas: "meta hl" "head hl" "sum hl" "links tags";
+  grid-template-areas: "meta hl" "head hl" "sum hl" "links tags" "media media";
   background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 32px; transition: transform .25s, box-shadow .25s, border-color .25s;
 }
@@ -268,7 +270,7 @@ a { color: inherit; }
   .profile-photo { max-width: 220px; position: static; }
   .profile-card dl { grid-template-columns: 1fr; }
   .profile-card dl > div:nth-child(2) { border-top: 1px solid var(--line); }
-  .project { grid-template-columns: 1fr; grid-template-areas: "meta" "head" "sum" "hl" "tags" "links"; padding: 24px; }
+  .project { grid-template-columns: 1fr; grid-template-areas: "meta" "head" "sum" "hl" "tags" "links" "media"; padding: 24px; }
   .project h3 { font-size: 24px; }
   .about-text p { font-size: 16px; }
   .era { grid-template-columns: 1fr; gap: 12px; }
@@ -279,4 +281,15 @@ a { color: inherit; }
 @media (max-width: 400px) {
   .brand { font-size: 13px; }
   .nav nav a:nth-child(1) { display: none; }
+}
+
+/* Project videos and research comparison */
+.project-media { grid-area: media; margin: 16px 0 0; min-width: 0; padding-top: 24px; border-top: 1px solid var(--line); }
+.project-media video { display: block; width: 100%; max-height: 540px; aspect-ratio: 16 / 9; object-fit: contain; background: #08090c; border-radius: 10px; }
+.project-media figcaption { margin-top: 12px; color: var(--fg-2); font-size: 13px; line-height: 1.7; }
+.comparison-link { display: block; overflow-x: auto; border-radius: 10px; background: white; }
+.comparison-link img { display: block; width: 100%; height: auto; }
+@media (max-width: 760px) {
+  .comparison-link img { min-width: 780px; }
+  .project-media { padding-top: 20px; }
 }

@@ -47,6 +47,7 @@ window.PORTFOLIO = {
   projects: [
     {
       title: "TopOut",
+      media: { type: "video", src: "https://topout-portfolio.vercel.app/assets/TopOutPromo.mp4", poster: "assets/topout-promo-poster.jpg", label: "TopOut 홍보영상", caption: "촬영부터 구간 편집·저장까지 앱의 사용 흐름을 담은 홍보영상입니다." },
       kind: "모바일 앱 · iOS / Android 출시",
       period: "2026.06 — 현재",
       role: "개인 프로젝트",
@@ -67,6 +68,7 @@ window.PORTFOLIO = {
     },
     {
       title: "CtrS",
+      media: { type: "image", src: "assets/ctrs-wv2-comparison.png", label: "WV2 전이 결과: 원본 SSA-MRN·C2MS·정답 및 오차 비교", caption: "WV3 학습 모델을 미학습 센서 WV2에 적용한 RR 장면 0 · seed 42. 장면 PSNR 27.80 → 28.69 dB. 확대 영역은 C2MS의 개선이 가장 큰 64×64 영역입니다. 이미지를 누르면 원본 크기로 볼 수 있습니다." },
       kind: "딥러닝 연구 · 위성영상 팬샤프닝",
       period: "2026.09 — 현재",
       role: "팀장 · 4인",
@@ -80,6 +82,25 @@ window.PORTFOLIO = {
       tags: ["PyTorch", "Computer Vision", "Pansharpening", "Remote Sensing"],
       links: [
         { label: "GitHub", url: "https://github.com/BIYONGHIYON/CtrS" }
+      ]
+    },
+    {
+      title: "NODE",
+      media: { type: "video", src: "assets/node-trailer.mp4", poster: "assets/node-trailer-poster.jpg", label: "NODE 홍보영상", caption: "로프 스윙과 행성별 중력, 2인 협동 플레이를 담은 홍보영상입니다." },
+      kind: "게임 · 2.5D 로컬 협동 플랫포머",
+      period: "2026.04 — 2026.06",
+      role: "개인 프로젝트",
+      summary: "두 우주비행사가 로프로 서로를 이어 우주를 탐험하는 2인 로컬 협동 게임입니다. 파트너나 지형에 로프를 걸고 스윙하며 퍼즐을 풀고, 흩어진 연료통을 모아 다음 행성으로 넘어갑니다.",
+      highlights: [
+        "파트너·지형에 거는 로프 스윙 액션",
+        "고중력 목성, 무중력 토성 등 행성마다 다른 중력",
+        "밀고 당기는 운석과 지형을 활용한 협동 퍼즐",
+        "Windows · macOS 설치 파일 배포"
+      ],
+      tags: ["Unity", "C#", "Local Co-op"],
+      links: [
+        { label: "다운로드", url: "https://github.com/BIYONGHIYON/NODE/releases/latest" },
+        { label: "GitHub", url: "https://github.com/BIYONGHIYON/NODE" }
       ]
     },
     {
@@ -98,24 +119,6 @@ window.PORTFOLIO = {
       links: [
         { label: "서비스 열기", url: "https://linkcast.byeonghyeon383.workers.dev/" },
         { label: "GitHub", url: "https://github.com/BIYONGHIYON/linkcast" }
-      ]
-    },
-    {
-      title: "NODE",
-      kind: "게임 · 2.5D 로컬 협동 플랫포머",
-      period: "2026.04 — 2026.06",
-      role: "개인 프로젝트",
-      summary: "두 우주비행사가 로프로 서로를 이어 우주를 탐험하는 2인 로컬 협동 게임입니다. 파트너나 지형에 로프를 걸고 스윙하며 퍼즐을 풀고, 흩어진 연료통을 모아 다음 행성으로 넘어갑니다.",
-      highlights: [
-        "파트너·지형에 거는 로프 스윙 액션",
-        "고중력 목성, 무중력 토성 등 행성마다 다른 중력",
-        "밀고 당기는 운석과 지형을 활용한 협동 퍼즐",
-        "Windows · macOS 설치 파일 배포"
-      ],
-      tags: ["Unity", "C#", "Local Co-op"],
-      links: [
-        { label: "다운로드", url: "https://github.com/BIYONGHIYON/NODE/releases/latest" },
-        { label: "GitHub", url: "https://github.com/BIYONGHIYON/NODE" }
       ]
     }
   ]

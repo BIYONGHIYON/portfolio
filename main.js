@@ -59,6 +59,12 @@
           </div>
           <p>${esc(p.summary)}</p>
           ${(p.highlights || []).length ? `<ul class="highlights">${p.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>` : ""}
+          ${p.media ? `<figure class="project-media ${p.media.type === "image" ? "comparison-media" : "video-media"}">
+            ${p.media.type === "image"
+              ? `<a class="comparison-link" href="${esc(p.media.src)}" target="_blank" rel="noopener" aria-label="${esc(p.media.label)} · 원본 크기로 보기"><img src="${esc(p.media.src)}" alt="${esc(p.media.label)}" loading="lazy" width="1592" height="320"></a>`
+              : `<video controls playsinline preload="none" poster="${esc(p.media.poster)}" aria-label="${esc(p.media.label)}"><source src="${esc(p.media.src)}" type="video/mp4">영상을 재생할 수 없습니다. <a href="${esc(p.media.src)}">${esc(p.media.label)} 보기</a></video>`}
+            <figcaption>${esc(p.media.caption)}</figcaption>
+          </figure>` : ""}
           <div class="tags">${(p.tags || []).map((t) => `<span>${esc(t)}</span>`).join("")}</div>
           ${(p.links || []).length ? `<div class="links">${p.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>` : ""}
         </article>`).join("")
