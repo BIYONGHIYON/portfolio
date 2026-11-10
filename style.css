@@ -241,3 +241,69 @@ strong { font-weight: 650; color: var(--fg); }
 @media (max-width: 400px) {
   .nav nav a:nth-child(1) { display: none; }
 }
+
+/* 인쇄(PDF) */
+.print-only { display: none; }
+@media print {
+  @page { size: A4; margin: 16mm 15mm 18mm; }
+  :root, :root[data-theme="dark"], :root[data-theme="light"] {
+    --bg: #ffffff; --surface: #ffffff; --fg: #1b1b1a; --fg-2: #4a4a45; --fg-3: #77766f; --line: #dddad2;
+    --accent: #284b7a; --type-award: #b07a12; --type-study: #284b7a; --type-activity: #2f7a5c; --type-military: #6b7040;
+    color-scheme: light;
+  }
+  html { scroll-behavior: auto; }
+  body { font-size: 10.5pt; line-height: 1.65; background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .print-only { display: revert; }
+  ul.print-only { display: block; }
+  span.print-only { display: inline; }
+  .screen-only, .nav, .hero-actions, .theme-toggle, .filters, .project .links, .project-media video, .footer { display: none !important; }
+
+  .hero { padding: 0 0 16px; max-width: none; }
+  .hero-meta { margin-bottom: 6px; font-size: 10pt; }
+  .hero-name { font-size: 30pt; margin-bottom: 4px; }
+  .hero-tagline { font-size: 15pt; margin-bottom: 8px; }
+  .lead { font-size: 10.5pt; margin-bottom: 10px; max-width: none; }
+  .print-note { margin: 0; padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px; font-size: 9.5pt; color: var(--fg-2); line-height: 1.7; }
+  a { color: var(--accent); text-decoration: none; }
+
+  .section { display: block; max-width: none; padding: 16px 0 4px; border-top: 1px solid var(--line); }
+  .section-head h2 { position: static; font-size: 14pt; margin-bottom: 10px; }
+  #projects, #timeline { break-before: page; border-top: 0; padding-top: 0; }
+
+  .about-grid { grid-template-columns: 30mm 1fr; gap: 16px; }
+  .about-text p { margin-bottom: 7px; font-size: 10pt; }
+  .profile-card { margin-top: 10px; break-inside: avoid; }
+  .profile-card dl > div { padding: 5px 0; }
+  .profile-card dd { font-size: 9.5pt; }
+  .cards { column-gap: 28px; }
+  .card { padding: 8px 0 10px; break-inside: avoid; }
+  .card:nth-child(-n+2) { padding-top: 0; }
+  .card h3 { font-size: 11.5pt; }
+  .card p { font-size: 9.5pt; line-height: 1.6; }
+
+  .project { padding: 0 0 22px; margin-bottom: 22px; break-inside: auto; }
+  .project + .project { break-before: page; }
+  .project h3 { font-size: 17pt; }
+  .project > p, .project .highlights li { font-size: 10pt; }
+  .project > p, .project .highlights { max-width: none; }
+  .project .tags { margin-bottom: 10px; font-size: 9.5pt; }
+  .print-links { list-style: none; margin: 0 0 4px; padding: 10px 0 0; border-top: 1px solid var(--line); font-size: 9.5pt; break-inside: avoid; }
+  .print-links li { display: grid; grid-template-columns: 22mm 1fr; gap: 10px; padding: 2px 0; }
+  .print-links span { color: var(--fg-3); }
+  .print-links a { word-break: break-all; }
+  .project-media { margin-top: 16px; break-inside: avoid; }
+  .video-still { display: block; width: 100%; max-height: 105mm; object-fit: contain; background: #f3f2ee; border-radius: 4px; }
+  .comparison-link { overflow: visible; }
+  .comparison-link img { min-width: 0 !important; }
+  .project-media figcaption { font-size: 9pt; }
+
+  .era { grid-template-columns: 34mm 1fr; padding: 8px 0; break-inside: avoid; }
+  .era li { padding: 1px 0; font-size: 9.5pt; line-height: 1.55; }
+  .era li .o { font-size: 8.5pt; }
+  .era li.hidden { display: grid; }
+  .era.empty { display: grid; }
+
+  .contact { max-width: none; padding: 14px 0 0; margin-top: 10px; break-inside: avoid; }
+  .contact h2 { font-size: 14pt; margin-bottom: 6px; }
+  .contact p { margin-bottom: 10px; }
+}
