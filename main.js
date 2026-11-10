@@ -53,7 +53,7 @@
     const body = parts.map((t) => t.includes("이미지를 누르면") ? `<span class="screen-only">${t}</span>` : t).join(" ");
     const page = (p.links || []).find((l) => l.primary);
     const where = m.type === "video" && page
-      ? ` <span class="print-only">영상 장면을 이미지로 옮겼습니다. 영상은 <a href="${esc(page.url)}">${esc(page.url.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a>에서 볼 수 있습니다.</span>`
+      ? ` <span class="print-only">영상의 한 장면을 사진으로 첨부했습니다. 영상은 <a href="${esc(page.url)}">${esc(page.url.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a>에서 볼 수 있습니다.</span>`
       : "";
     return body + where;
   };
@@ -71,11 +71,11 @@
           <p>${esc(p.summary)}</p>
           ${(p.highlights || []).length ? `<ul class="highlights">${p.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>` : ""}
           <div class="tags">${(p.tags || []).map((t) => `<span>${esc(t)}</span>`).join("")}</div>
-          ${(p.links || []).length ? `<ul class="print-links print-only">${p.links.map((l) => `<li><span>${esc(l.label)}</span><a href="${esc(l.url)}">${esc(l.url.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></li>`).join("")}</ul>` : ""}
+          ${(p.links || []).length ? `<ul class="print-links print-only">${p.links.map((l) => `<li${l.primary ? ' class="primary"' : ""}><span>${esc(l.label)}</span><a href="${esc(l.url)}">${esc(l.url.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></li>`).join("")}</ul>` : ""}
           ${(p.links || []).length ? `<div class="links">${p.links.map((l) => `<a${l.primary ? ' class="primary"' : ""} href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>` : ""}
-          ${p.media ? `<figure class="project-media ${p.media.type === "image" ? "comparison-media" : "video-media"}">
-            ${p.media.type === "image"
-              ? `<a class="comparison-link" href="${esc(p.media.src)}" target="_blank" rel="noopener" aria-label="${esc(p.media.label)} · 원본 크기로 보기"><img src="${esc(p.media.src)}" alt="${esc(p.media.label)}" loading="lazy" width="1592" height="320"></a>`
+          ${p.media ? `<figure class="project-media ${p.media.type === "images" ? "image-media" : "video-media"}">
+            ${p.media.type === "images"
+              ? p.media.items.map((it) => `<a class="image-link" href="${esc(it.src)}" target="_blank" rel="noopener" aria-label="${esc(it.label)} · 원본 크기로 보기"><img src="${esc(it.src)}" alt="${esc(it.label)}" loading="lazy" width="${it.width}" height="${it.height}"></a>`).join("")
               : `<video controls playsinline preload="none" poster="${esc(p.media.poster)}" aria-label="${esc(p.media.label)}"><source src="${esc(p.media.src)}" type="video/mp4">영상을 재생할 수 없습니다. <a href="${esc(p.media.src)}">${esc(p.media.label)} 보기</a></video><img class="video-still print-only" src="${esc(p.media.poster)}" alt="${esc(p.media.label)} 장면">`}
             <figcaption>${captionHtml(p)}</figcaption>
           </figure>` : ""}

@@ -69,7 +69,10 @@ window.PORTFOLIO = {
     },
     {
       title: "CtrS",
-      media: { type: "image", src: "assets/ctrs-wv2-comparison.png", label: "WV2 전이 결과: 원본 SSA-MRN·C2MS·정답 및 오차 비교", caption: "WV3 학습 모델을 미학습 센서 WV2에 적용한 RR 장면 0 · seed 42. 장면 PSNR 27.80 → 28.69 dB. 확대 영역은 C2MS의 개선이 가장 큰 64×64 영역입니다. 이미지를 누르면 원본 크기로 볼 수 있습니다." },
+      media: { type: "images", label: "WV2 전이 결과 장면 0", items: [
+        { src: "assets/ctrs-wv2-full-scene0.png", width: 1328, height: 608, label: "WV2 장면 0 원본 크기 비교: LR MS·PAN 입력·원본 SSA-MRN·C2MS·정답과 두 모델의 오차 지도" },
+        { src: "assets/ctrs-wv2-zoom-scene0.png", width: 1592, height: 320, label: "WV2 장면 0 확대 비교: C2MS 개선이 가장 큰 64×64 영역의 원본·C2MS·정답과 오차" }
+      ], caption: "WV3로 학습한 모델을 학습하지 않은 센서 WV2에 적용한 RR 장면 0(seed 42)입니다. 위는 원본 크기 비교와 오차 지도, 아래는 C2MS의 개선이 가장 큰 64×64 영역을 확대한 비교입니다. 장면 PSNR은 원본 27.80 → C2MS 28.69 dB입니다. 이미지를 누르면 원본 크기로 볼 수 있습니다." },
       kind: "딥러닝 연구 · 위성영상 팬샤프닝",
       period: "2026.09 — 현재",
       role: "팀장 · 4인",
@@ -108,6 +111,9 @@ window.PORTFOLIO = {
     },
     {
       title: "Linkcast",
+      media: { type: "images", label: "Linkcast 첫 화면", items: [
+        { src: "assets/linkcast-landing.jpg", width: 1600, height: 833, label: "Linkcast 첫 화면: 캡처보드 연결 안내와 입력 설정, 링크 만들고 복사 버튼" }
+      ], caption: "Linkcast에 접속하면 처음 보이는 송출 화면입니다. 캡처보드를 연결하고 링크를 만들어 공유합니다." },
       kind: "웹 서비스 · 실시간 P2P 화면 공유",
       period: "2026.09 — 2026.10",
       role: "개인 프로젝트",
