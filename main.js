@@ -76,7 +76,7 @@
           ${p.media ? `<figure class="project-media ${p.media.type === "images" ? "image-media" : "video-media"}">
             ${p.media.type === "images"
               ? p.media.items.map((it) => `<a class="image-link" href="${esc(it.src)}" target="_blank" rel="noopener" aria-label="${esc(it.label)} · 원본 크기로 보기"><img src="${esc(it.src)}" alt="${esc(it.label)}" loading="lazy" width="${it.width}" height="${it.height}"></a>`).join("")
-              : `<video controls playsinline preload="none" poster="${esc(p.media.poster)}" aria-label="${esc(p.media.label)}"><source src="${esc(p.media.src)}" type="video/mp4">영상을 재생할 수 없습니다. <a href="${esc(p.media.src)}">${esc(p.media.label)} 보기</a></video><img class="video-still print-only" src="${esc(p.media.poster)}" alt="${esc(p.media.label)} 장면">`}
+              : `<video controls playsinline preload="none" poster="${esc(p.media.poster)}" aria-label="${esc(p.media.label)}"><source src="${esc(p.media.src)}" type="video/mp4">영상을 재생할 수 없습니다. <a href="${esc(p.media.src)}">${esc(p.media.label)} 보기</a></video><img class="video-still print-only" src="${esc(p.media.still || p.media.poster)}" alt="${esc(p.media.label)} 장면">`}
             <figcaption>${captionHtml(p)}</figcaption>
           </figure>` : ""}
         </article>`).join("")

@@ -91,7 +91,7 @@ window.PORTFOLIO = {
     },
     {
       title: "NODE",
-      media: { type: "video", src: "assets/node-trailer.mp4", poster: "assets/node-trailer-poster.jpg", label: "NODE 홍보영상", caption: "로프 스윙과 행성별 중력, 2인 협동 플레이를 담은 홍보영상입니다." },
+      media: { type: "video", src: "assets/node-trailer.mp4", poster: "assets/node-trailer-poster.jpg", still: "assets/node-trailer-still.jpg", label: "NODE 홍보영상", caption: "로프 스윙과 행성별 중력, 2인 협동 플레이를 담은 홍보영상입니다." },
       kind: "게임 · 2.5D 로컬 협동 플랫포머",
       period: "2026.04 — 2026.06",
       role: "개인 프로젝트",
