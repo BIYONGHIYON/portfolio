@@ -5,13 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>이병현 · Portfolio</title>
   <meta name="description" content="동국대학교 멀티미디어공학과 졸업 예정 개발자 포트폴리오. 앱 개발, 알고리즘, 컴퓨터비전, 영상처리, 딥러닝.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
   <script>
-    document.documentElement.classList.add("js");
     try {
       const saved = localStorage.getItem("theme");
       if (saved) document.documentElement.dataset.theme = saved;
@@ -20,7 +16,8 @@
 </head>
 <body>
   <header class="nav">
-    <a class="brand" href="#top">BIYONGHIYON<span class="cursor">_</span></a>
+    <div class="nav-inner">
+    <a class="brand" href="#top">이병현</a>
     <nav>
       <a href="#about">소개</a>
       <a href="#skills">역량</a>
@@ -29,44 +26,35 @@
       <a href="#contact">연락</a>
     </nav>
     <button class="theme-toggle" type="button" aria-label="다크 모드 전환">
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+      <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
     </button>
+    </div>
   </header>
 
   <main id="top">
     <!-- Hero -->
     <section class="hero">
-      <canvas class="hero-canvas" aria-hidden="true"></canvas>
-      <div class="hero-inner">
-        <p class="eyebrow mono">Dongguk Univ. · Multimedia Engineering</p>
-        <p class="hero-name">이병현 <span>· 소프트웨어 개발자</span></p>
-        <h1>
-          문제를 발견하고,<br>
-          <span class="grad">해결을 구현</span>합니다.
-        </h1>
-        <p class="lead">
-          앱을 개발·출시하고, 컴퓨터비전과 딥러닝을 연구합니다.<br class="br-wide">
-          동국대학교 멀티미디어공학과 졸업 예정 개발자입니다.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">대표 프로젝트 보기 ↓</a>
-          <a class="btn ghost" href="https://github.com/BIYONGHIYON" target="_blank" rel="noopener">GitHub ↗</a>
-          <a class="btn ghost" href="mailto:pilot803@naver.com">메일 보내기</a>
-        </div>
+      <p class="hero-meta">이병현 · 소프트웨어 개발자</p>
+      <h1>문제를 발견하고,<br>해결을 구현합니다.</h1>
+      <p class="lead">
+        앱을 개발·출시하고, 컴퓨터비전과 딥러닝을 연구합니다.<br class="br-wide">
+        동국대학교 멀티미디어공학과 졸업 예정 개발자입니다.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">프로젝트 보기</a>
+        <a class="btn" href="https://github.com/BIYONGHIYON" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:pilot803@naver.com">메일 보내기</a>
       </div>
-      <a class="scroll-hint mono" href="#about" aria-label="아래로">scroll ↓</a>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
-      <div class="section-head reveal">
-        <span class="num mono">01</span>
-        <h2>소개</h2>
-      </div>
+      <div class="section-head"><h2>소개</h2></div>
+      <div class="section-body">
       <div class="about-grid">
-        <img class="profile-photo reveal" src="assets/profile.jpg" alt="프로필 사진" width="591" height="759">
+        <img class="profile-photo" src="assets/profile.jpg" alt="프로필 사진" width="591" height="759">
         <div class="about-body">
-        <div class="about-text reveal">
+        <div class="about-text">
           <p>
             어릴 때부터 과학전람회와 발명·창의력 대회에 나가며 <strong>직접 만들어 보는 것</strong>을 좋아했습니다.
             지금은 앱·웹 개발과 컴퓨터비전·딥러닝 연구를 중심으로 작업합니다.
@@ -80,7 +68,7 @@
             연구에서는 가설을 세우고 실험 결과를 비교하며 개선 방향을 검토합니다.
           </p>
         </div>
-        <aside class="profile-card reveal">
+        <aside class="profile-card">
           <dl>
             <div><dt>학교</dt><dd>동국대학교 멀티미디어공학과<br><small>2027.08 졸업 예정</small></dd></div>
             <div><dt>생년월일</dt><dd>2003.08.03</dd></div>
@@ -92,62 +80,47 @@
         </aside>
         </div>
       </div>
+      </div>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="section">
-      <div class="section-head reveal">
-        <span class="num mono">02</span>
-        <h2>관심 분야와 역량</h2>
-      </div>
+      <div class="section-head"><h2>관심 분야와 역량</h2></div>
+      <div class="section-body">
       <div class="cards">
-        <article class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg>
-          </div>
+        <article class="card">
           <h3>앱 · 웹 개발</h3>
           <p>아이디어를 실제로 쓰이는 서비스로 만듭니다. 기획부터 구현, 출시, 유지보수까지 경험했고 iOS·Android 앱과 실시간 웹 서비스를 직접 배포했습니다.</p>
         </article>
-        <article class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2.5 12S6 5 12 5s9.5 7 9.5 7-3.5 7-9.5 7S2.5 12 2.5 12Z"/></svg>
-          </div>
+        <article class="card">
           <h3>컴퓨터비전</h3>
           <p>오픈소스 온디바이스 자세 추정(pose) 모델 여러 개를 직접 벤치마크해 비교하고, 모바일 기기에서 실시간으로 동작하는 영상 분석을 앱에 적용했습니다.</p>
         </article>
-        <article class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="7" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="7" r="2"/><circle cx="19" cy="17" r="2"/><path d="m7 8 3 3m-3 5 3-3m4-1 3-4m-3 4 3 4"/></svg>
-          </div>
+        <article class="card">
           <h3>딥러닝</h3>
           <p>영상 기반 오픈소스 팬샤프닝 모델을 재현하고, 위성영상을 대상으로 구조와 학습 방식을 바꿔 가며 성능을 개선하는 연구를 진행하고 있습니다.</p>
         </article>
-        <article class="card reveal">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M4 12h16M4 18h7"/><circle cx="17" cy="6" r="2"/><circle cx="14" cy="18" r="2"/></svg>
-          </div>
+        <article class="card">
           <h3>알고리즘</h3>
           <p>문제를 구조로 쪼개고 효율적인 풀이를 찾는 과정을 즐깁니다. 프로그래밍기초와실습 실습조교로 학생들의 실습을 도왔습니다.</p>
         </article>
+      </div>
       </div>
     </section>
 
     <!-- Projects -->
     <section id="projects" class="section">
-      <div class="section-head reveal">
-        <span class="num mono">03</span>
-        <h2>프로젝트</h2>
-      </div>
+      <div class="section-head"><h2>프로젝트</h2></div>
+      <div class="section-body">
       <div class="projects" data-projects></div>
+      </div>
     </section>
 
     <!-- Timeline -->
     <section id="timeline" class="section">
-      <div class="section-head reveal">
-        <span class="num mono">04</span>
-        <h2>이력</h2>
-      </div>
-      <div class="filters reveal" role="group" aria-label="이력 분류">
+      <div class="section-head"><h2>이력</h2></div>
+      <div class="section-body">
+      <div class="filters" role="group" aria-label="이력 분류">
         <button type="button" class="active" data-filter="all">전체</button>
         <button type="button" data-filter="award">수상</button>
         <button type="button" data-filter="study">학업</button>
@@ -155,22 +128,19 @@
         <button type="button" data-filter="military">병역</button>
       </div>
       <div class="timeline" data-timeline></div>
+      </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="contact reveal">
-      <p class="mono eyebrow">contact</p>
+    <section id="contact" class="contact">
       <h2>언제든 연락 주세요.</h2>
-      <a class="mail" href="mailto:pilot803@naver.com">pilot803@naver.com</a>
-      <div class="hero-actions center">
-        <a class="btn ghost" href="https://github.com/BIYONGHIYON" target="_blank" rel="noopener">GitHub ↗</a>
-      </div>
+      <p>메일은 <a class="mail" href="mailto:pilot803@naver.com">pilot803@naver.com</a>, 코드는 <a href="https://github.com/BIYONGHIYON" target="_blank" rel="noopener">GitHub</a>에 있습니다.</p>
     </section>
   </main>
 
-  <footer class="footer mono">© 2026 BIYONGHIYON</footer>
+  <footer class="footer">© 2026 BIYONGHIYON</footer>
 
-  <script src="data.js?v=9"></script>
-  <script src="main.js?v=9"></script>
+  <script src="data.js?v=10"></script>
+  <script src="main.js?v=10"></script>
 </body>
 </html>
