@@ -43,7 +43,8 @@ window.PORTFOLIO = {
     }
   ],
 
-  // 형식: { title, kind, period, role, summary, highlights: [], tags: [], links: [{ label, url }] }
+  // 형식: { title, kind, period, role, summary, highlights: [], tags: [], links: [{ label, url, primary }] }
+  // links 순서: 소개 페이지(primary: true, 색상 강조) → GitHub → 다운로드·서비스
   projects: [
     {
       title: "TopOut",
@@ -60,10 +61,10 @@ window.PORTFOLIO = {
       ],
       tags: ["Swift", "Kotlin", "Jetpack Compose", "Apple Vision", "MoveNet", "MobileSAM"],
       links: [
+        { label: "소개 페이지", url: "https://topout-portfolio.vercel.app/", primary: true },
+        { label: "GitHub", url: "https://github.com/BIYONGHIYON/TopOut-app" },
         { label: "App Store", url: "https://apps.apple.com/app/id6790163178" },
-        { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.topout.cam" },
-        { label: "소개 페이지", url: "https://topout-portfolio.vercel.app/" },
-        { label: "GitHub", url: "https://github.com/BIYONGHIYON/TopOut-app" }
+        { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.topout.cam" }
       ]
     },
     {
@@ -81,6 +82,7 @@ window.PORTFOLIO = {
       ],
       tags: ["PyTorch", "Computer Vision", "Pansharpening", "Remote Sensing"],
       links: [
+        { label: "소개 페이지", url: "https://biyonghiyon.github.io/CtrS/", primary: true },
         { label: "GitHub", url: "https://github.com/BIYONGHIYON/CtrS" }
       ]
     },
@@ -99,8 +101,9 @@ window.PORTFOLIO = {
       ],
       tags: ["Unity", "C#", "Local Co-op"],
       links: [
-        { label: "다운로드", url: "https://github.com/BIYONGHIYON/NODE/releases/latest" },
-        { label: "GitHub", url: "https://github.com/BIYONGHIYON/NODE" }
+        { label: "소개 페이지", url: "https://biyonghiyon.github.io/NODE/", primary: true },
+        { label: "GitHub", url: "https://github.com/BIYONGHIYON/NODE" },
+        { label: "다운로드", url: "https://github.com/BIYONGHIYON/NODE/releases/latest" }
       ]
     },
     {
@@ -117,8 +120,9 @@ window.PORTFOLIO = {
       ],
       tags: ["TypeScript", "React", "WebRTC", "Cloudflare Workers", "Durable Objects"],
       links: [
-        { label: "서비스 열기", url: "https://linkcast.byeonghyeon383.workers.dev/" },
-        { label: "GitHub", url: "https://github.com/BIYONGHIYON/linkcast" }
+        { label: "소개 페이지", url: "https://biyonghiyon.github.io/linkcast/", primary: true },
+        { label: "GitHub", url: "https://github.com/BIYONGHIYON/linkcast" },
+        { label: "서비스 열기", url: "https://linkcast.byeonghyeon383.workers.dev/" }
       ]
     }
   ]

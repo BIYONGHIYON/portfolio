@@ -198,6 +198,10 @@ a { color: inherit; }
   background: var(--fg); color: var(--bg); transition: opacity .2s;
 }
 .project .links a:hover { opacity: .8; }
+.project .links a.primary { background: var(--accent); color: #fff; }
+.project .links a:not(.primary) { background: transparent; color: var(--fg); box-shadow: inset 0 0 0 1px var(--line); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .project .links a.primary { color: #0e0f13; } }
+:root[data-theme="dark"] .project .links a.primary { color: #0e0f13; }
 .project.empty {
   display: flex; flex-direction: column; align-items: center; text-align: center; padding: 56px 28px;
   border-style: dashed; background: transparent;

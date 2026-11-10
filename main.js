@@ -66,7 +66,7 @@
             <figcaption>${esc(p.media.caption)}</figcaption>
           </figure>` : ""}
           <div class="tags">${(p.tags || []).map((t) => `<span>${esc(t)}</span>`).join("")}</div>
-          ${(p.links || []).length ? `<div class="links">${p.links.map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>` : ""}
+          ${(p.links || []).length ? `<div class="links">${p.links.map((l) => `<a${l.primary ? ' class="primary"' : ""} href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>` : ""}
         </article>`).join("")
     : `<div class="project empty reveal"><span class="meta mono">coming soon</span><h3>프로젝트를 정리하고 있습니다</h3><p>앱 · 웹 · 컴퓨터비전 프로젝트가 곧 추가됩니다.</p></div>`;
 
