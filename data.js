@@ -64,7 +64,7 @@ window.PORTFOLIO = {
         { value: "약 110명", label: "최대 MAU (2026.09)" },
         { value: "약 40%", label: "월간 사용자 중 매주 사용" }
       ],
-      metricsNote: "클라이밍장에서, 운동하는 날에만 쓰는 앱이라 매일 사용(DAU) 대신 주간 재사용을 지표로 봤습니다. 대부분 주 1회 정도 운동하는데, 월간 사용자 1명이 한 달에 약 2주 꼴로 앱을 열어 운동하러 간 날 상당 부분 TopOut으로 촬영합니다. 주간 사용 비율은 iOS 기준(사용 데이터 공유에 동의한 기기)입니다.",
+      metricsNote: "클라이밍을 하는 사람만을 위한 앱이라 사용자 층이 좁고, 클라이머 대부분이 한 달에 2~3회 정도 클라이밍장에 가기 때문에 매일 쓰이는 앱이 아닙니다. 그래서 매일 사용(DAU) 대신 주간 재사용을 지표로 봤습니다. 월간 사용자 1명이 한 달에 약 2주 꼴로 앱을 열어, 운동하러 간 날 상당수를 TopOut으로 촬영합니다. 주간 사용 비율은 iOS 기준(사용 데이터 공유에 동의한 기기)입니다.",
       tags: ["Swift", "Kotlin", "Jetpack Compose", "Apple Vision", "MoveNet", "MobileSAM"],
       links: [
         { label: "소개 페이지", url: "https://topout-portfolio.vercel.app/", primary: true },
