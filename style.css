@@ -237,7 +237,8 @@ strong { font-weight: 650; color: var(--fg); }
   .era { grid-template-columns: 1fr; gap: 8px; }
   .era li { grid-template-columns: 64px 1fr; gap: 10px; }
   .contact { padding: 56px 16px 72px; }
-  .image-link img[width="1592"], .image-link img[width="1328"] { min-width: 720px; }
+  .image-link img[width="1592"] { min-width: 720px; }
+  .image-link img[width="2120"] { min-width: 900px; }
 }
 @media (max-width: 400px) {
   .nav nav a:nth-child(1) { display: none; }

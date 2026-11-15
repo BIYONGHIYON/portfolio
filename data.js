@@ -70,23 +70,24 @@ window.PORTFOLIO = {
     {
       title: "CtrS",
       media: { type: "images", label: "WV2 전이 결과 장면 0", items: [
-        { src: "assets/ctrs-wv2-full-scene0.png", width: 1328, height: 608, label: "WV2 장면 0 원본 크기 비교: LR MS·PAN 입력·원본 SSA-MRN·C2MS·정답과 두 모델의 오차 지도" },
-        { src: "assets/ctrs-wv2-zoom-scene0.png", width: 1592, height: 320, label: "WV2 장면 0 확대 비교: C2MS 개선이 가장 큰 64×64 영역의 원본·C2MS·정답과 오차" }
-      ], caption: "WV3로 학습한 모델을 학습하지 않은 센서 WV2에 적용한 RR 장면 0(seed 42)입니다. 위는 원본 크기 비교와 오차 지도, 아래는 C2MS의 개선이 가장 큰 64×64 영역을 확대한 비교입니다. 장면 PSNR은 원본 27.80 → C2MS 28.69 dB입니다. 이미지를 누르면 원본 크기로 볼 수 있습니다." },
+        { src: "assets/ctrs-sp-wv2-full-scene0.png", width: 1592, height: 608, label: "WV2 장면 0 원본 크기 비교: LR MS·PAN 입력·원본 SSA-MRN·C2MS-SP·C2MS-SP-Lite·정답과 세 모델의 오차 지도" },
+        { src: "assets/ctrs-sp-wv2-zoom-scene0.png", width: 2120, height: 320, label: "WV2 장면 0 확대 비교: C2MS-SP 개선이 가장 큰 64×64 영역의 원본·C2MS-SP·C2MS-SP-Lite·정답과 오차" }
+      ], caption: "WV3로 학습한 모델을 학습하지 않은 센서 WV2에 적용한 RR 장면 0(seed 42)입니다. 위는 원본 크기 비교와 오차 지도, 아래는 C2MS-SP의 개선이 가장 큰 64×64 영역을 확대한 비교입니다. 장면 PSNR은 원본 27.80 → C2MS-SP 30.90 dB입니다(밴드별 센서 보정 포함). 이미지를 누르면 원본 크기로 볼 수 있습니다." },
       kind: "딥러닝 연구 · 위성영상 팬샤프닝",
       period: "2026.09 — 현재",
       role: "팀장 · 4인",
       summary: "고해상도 흑백 위성영상(PAN)과 저해상도 다중분광영상(MS)을 합쳐 고해상도 컬러 영상을 복원하는 팬샤프닝 연구입니다. 동국대 종합설계1 프로젝트로 SSA-MRN의 성능을 개선하고 있습니다.",
       highlights: [
-        "병렬 가지 + 축척 혼합 학습으로 새 기준 모델 C2MS 채택",
-        "원본 SSA-MRN 대비 QB RR PSNR +0.87 dB (3시드 평균)",
-        "학습하지 않은 센서(WV2)에서 색 치우침 7.2% → 1.0%",
-        "GF2·WV3·학습하지 않은 WV2 센서에서도 원본 대비 개선 (3시드)"
+        "병렬 가지 · 축척 혼합 학습 · 관측 일치 사영으로 기준 모델 C2MS-SP 채택",
+        "원본 SSA-MRN 대비 RR PSNR QB +0.94 · GF2 +2.24 · WV3 +1.14 dB (3시드 평균)",
+        "학습하지 않은 센서(WV2)에서 +2.95 dB, 색 치우침 7.2% → 0.1% (밴드별 센서 보정)",
+        "연산을 66%로 줄인 경량판 C2MS-SP-Lite (C2MS-SP와 0.01–0.03 dB 차이)"
       ],
       tags: ["PyTorch", "Computer Vision", "Pansharpening", "Remote Sensing"],
       links: [
         { label: "소개 페이지", url: "https://biyonghiyon.github.io/CtrS/", primary: true },
-        { label: "GitHub", url: "https://github.com/BIYONGHIYON/CtrS" }
+        { label: "GitHub", url: "https://github.com/BIYONGHIYON/CtrS" },
+        { label: "결과 비교 뷰어", url: "https://biyonghiyon.github.io/CtrS-viewer/" }
       ]
     },
     {
