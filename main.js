@@ -70,6 +70,7 @@
           </div>
           <p>${esc(p.summary)}</p>
           ${(p.highlights || []).length ? `<ul class="highlights">${p.highlights.map((h) => `<li>${esc(h)}</li>`).join("")}</ul>` : ""}
+          ${(p.metrics || []).length ? `<div class="metrics">${p.metrics.map((m) => `<div><b>${esc(m.value)}</b><span>${esc(m.label)}</span></div>`).join("")}</div>${p.metricsNote ? `<p class="metrics-note">${esc(p.metricsNote)}</p>` : ""}` : ""}
           <div class="tags">${(p.tags || []).map((t) => `<span>${esc(t)}</span>`).join("")}</div>
           ${(p.links || []).length ? `<ul class="print-links print-only">${p.links.map((l) => `<li${l.primary ? ' class="primary"' : ""}><span>${esc(l.label)}</span><a href="${esc(l.url)}">${esc(l.url.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a></li>`).join("")}</ul>` : ""}
           ${(p.links || []).length ? `<div class="links">${p.links.map((l) => `<a${l.primary ? ' class="primary"' : ""} href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>` : ""}

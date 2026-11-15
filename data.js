@@ -54,11 +54,17 @@ window.PORTFOLIO = {
       role: "개인 프로젝트",
       summary: "등반 시작부터 완등 순간까지 자동으로 찾아주는 실내 클라이밍 촬영 앱입니다. 긴 영상을 다시 돌려보며 장면을 찾는 대신, 기기 안에서 움직임과 자세를 분석해 필요한 구간만 골라 줍니다.",
       highlights: [
-        "App Store · Google Play 출시 (v3.0)",
+        "App Store · Google Play 출시 (v3.0), 사용자 피드백으로 계속 업데이트",
         "기기 내 자세 추정과 MobileSAM으로 매트 경계 자동 탐지",
         "한 번의 촬영에서 여러 등반 시도를 자동으로 구분",
-        "영상을 서버로 보내지 않는 온디바이스 분석 · 9개 언어 지원"
+        "영상을 서버로 보내지 않는 온디바이스 분석 · 9개 언어 지원 (스페인·포르투갈·미국 설치)"
       ],
+      metrics: [
+        { value: "약 210회", label: "누적 설치 (광고 없음)" },
+        { value: "약 110명", label: "최대 MAU (2026.09)" },
+        { value: "약 40%", label: "월간 사용자 중 매주 사용" }
+      ],
+      metricsNote: "클라이밍장에서, 운동하는 날에만 쓰는 앱이라 매일 사용(DAU) 대신 주간 재사용을 지표로 봤습니다. 대부분 주 1회 정도 운동하는데, 월간 사용자 1명이 한 달에 약 2주 꼴로 앱을 열어 운동하러 간 날 상당 부분 TopOut으로 촬영합니다. 주간 사용 비율은 iOS 기준(사용 데이터 공유에 동의한 기기)입니다.",
       tags: ["Swift", "Kotlin", "Jetpack Compose", "Apple Vision", "MoveNet", "MobileSAM"],
       links: [
         { label: "소개 페이지", url: "https://topout-portfolio.vercel.app/", primary: true },
