@@ -120,7 +120,7 @@ window.PORTFOLIO = {
     {
       title: "Linkcast",
       media: { type: "images", label: "Linkcast 첫 화면", items: [
-        { src: "assets/linkcast-landing.jpg", width: 1600, height: 833, label: "Linkcast 첫 화면: 캡처보드 연결 안내와 입력 설정, 링크 만들고 복사 버튼" }
+        { src: "assets/linkcast-landing.jpg?v=2", width: 1600, height: 833, label: "Linkcast 첫 화면: 캡처보드 연결 안내와 입력 설정, 링크 만들고 복사 버튼" }
       ], caption: "Linkcast에 접속하면 처음 보이는 송출 화면입니다. 캡처보드를 연결하고 링크를 만들어 공유합니다." },
       kind: "웹 서비스 · 실시간 P2P 화면 공유",
       period: "2026.09 — 2026.10",
