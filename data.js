@@ -71,7 +71,8 @@ window.PORTFOLIO = {
         { label: "소개 페이지", url: "https://topout-portfolio.vercel.app/", primary: true },
         { label: "GitHub", url: "https://github.com/BIYONGHIYON/TopOut-app" },
         { label: "App Store", url: "https://apps.apple.com/app/id6790163178" },
-        { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.topout.cam" }
+        { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.topout.cam" },
+        { label: "Instagram", url: "https://www.instagram.com/topout_app/" }
       ]
     },
     {
