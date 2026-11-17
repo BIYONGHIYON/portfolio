@@ -48,7 +48,7 @@ window.PORTFOLIO = {
   projects: [
     {
       title: "TopOut",
-      media: { type: "video", src: "https://topout-portfolio.vercel.app/assets/TopOutPromo.mp4", poster: "assets/topout-promo-poster.jpg", label: "TopOut 홍보영상", caption: "다빈치 리졸브로 직접 제작한 모션그래픽 홍보영상입니다." },
+      media: { type: "video", src: "https://topout-portfolio.vercel.app/assets/TopOutPromo.mp4", poster: "assets/topout-promo-poster.jpg", printHeight: "64mm", label: "TopOut 홍보영상", caption: "다빈치 리졸브로 직접 제작한 모션그래픽 홍보영상입니다." },
       kind: "모바일 앱 · iOS / Android 출시",
       period: "2026.06 — 현재",
       role: "개인 프로젝트",
