@@ -92,9 +92,9 @@ window.PORTFOLIO = {
       ],
       tags: ["PyTorch", "Computer Vision", "Pansharpening", "Remote Sensing"],
       links: [
-        { label: "소개 페이지", url: "https://biyonghiyon.github.io/CtrS/", primary: true },
+        { label: "소개 페이지", url: "https://biyonghiyon.github.io/CtrS/portfolio/biyonghiyon/", primary: true },
         { label: "GitHub", url: "https://github.com/BIYONGHIYON/CtrS" },
-        { label: "결과 비교 뷰어", url: "https://biyonghiyon.github.io/CtrS-viewer/" }
+        { label: "결과 비교 뷰어", url: "https://biyonghiyon.github.io/CtrS/" }
       ]
     },
     {
